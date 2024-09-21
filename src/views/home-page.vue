@@ -1,11 +1,13 @@
 <script setup lang="ts">
+import AppTitle from '@/components/common/app-title.vue'
+
 defineOptions({
   name: 'HomePage'
 })
 </script>
 
 <template>
-  <div>
+  <AppTitle>
     {{ $t('labels.welcome') }}
-  </div>
+  </AppTitle>
 </template>

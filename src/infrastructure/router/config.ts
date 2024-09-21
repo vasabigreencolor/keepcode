@@ -20,15 +20,13 @@ export const router = createRouter({
       meta: {
         layout: 'MainLayout',
       },
-      children: [
-        {
-          path: routes.studentDocs(id),
-          component: () => import('@/views/student/document-page.vue'),
-          meta: {
-            layout: 'MainLayout',
-          },
-        }
-      ]
+    },
+    {
+      path: routes.studentDocs(id),
+      component: () => import('@/views/student/document-page.vue'),
+      meta: {
+        layout: 'MainLayout',
+      },
     }
   ]
 })
