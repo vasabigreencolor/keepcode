@@ -4,27 +4,31 @@ import HomePage from '@/views/home-page.vue'
 
 const id = ':id'
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: routes.home,
-      name: 'home',
-      component: HomePage
+      component: HomePage,
+      meta: {
+        layout: 'MainLayout',
+      },
     },
     {
       path: routes.studentList,
-      name: 'student',
-      component: () => import('../views/student/list-page.vue'),
+      component: () => import('@/views/student/list-page.vue'),
+      meta: {
+        layout: 'MainLayout',
+      },
       children: [
         {
           path: routes.studentDocs(id),
-          name: 'student-docs',
-          component: () => import('../views/student/document-page.vue'),
+          component: () => import('@/views/student/document-page.vue'),
+          meta: {
+            layout: 'MainLayout',
+          },
         }
       ]
     }
   ]
 })
-
-export default router

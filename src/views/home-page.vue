@@ -5,5 +5,7 @@ defineOptions({
 </script>
 
 <template>
-  <main>HomePage</main>
+  <div>
+    {{ $t('labels.welcome') }}
+  </div>
 </template>

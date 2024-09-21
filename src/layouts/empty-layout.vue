@@ -1,9 +1,11 @@
 <script setup lang="ts">
 defineOptions({
-  name: 'StudentListPage'
+  name: 'EmptyLayout'
 })
 </script>
 
 <template>
-  <div>StudentListPage</div>
+  <div class="empty-layout">
+    <slot />
+  </div>
 </template>
