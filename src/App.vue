@@ -1,7 +1,9 @@
 <template>
-  <component :is="layout">
-    <router-view></router-view>
-  </component>
+  <v-app>
+    <component :is="layout">
+      <router-view></router-view>
+    </component>
+  </v-app>
 </template>
 
 <script setup lang="ts">

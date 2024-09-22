@@ -28,6 +28,7 @@ const { items } = props
 .list {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 </style>
