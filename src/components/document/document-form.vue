@@ -36,6 +36,7 @@ const handleSubmit = () => {
 }
 </script>
 
+// здесь уже поленился прокидывать компоненты и просто сделал форму
 <template>
   <v-form :disabled="props.loading" v-model="isValid" class="form" @submit.prevent="handleSubmit">
     <v-text-field

@@ -21,5 +21,3 @@ const handleClick = () => {
 <template>
   <v-btn density="compact" size="large" :icon="props.icon" variant="text" @click="handleClick" />
 </template>
-
-<style scoped lang="scss"></style>
