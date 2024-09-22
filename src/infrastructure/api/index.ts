@@ -1,5 +1,5 @@
 import type { IStudent, IStudentListResponse } from "../interfaces/domains/i-student";
-import type { IStudentDocumentListResponse } from "../interfaces/domains/i-student-document";
+import type { IDocument, IStudentDocument, IStudentDocumentListResponse } from "../interfaces/domains/i-student-document";
 import { HttpClient } from "./http-client";
 import cache from 'memory-cache';
 
@@ -70,7 +70,16 @@ export class Api extends HttpClient {
 
   public async getStudentDocs(studentId: string) {
     const key = `getStudentDocs${studentId}`;
-    const url = `/posts/${studentId}/comments`;
+    const url = `/posts?userId=${studentId}`;
     return await this.cachedFetch<IStudentDocumentListResponse>(key, url);
+  }
+
+  public async createDocument(studentId: string, doc: IDocument) {
+    const url = '/posts';
+    return await this.post<IStudentDocument>(url, {
+      userId: studentId,
+      title: doc.title,
+      body: doc.body,
+    })
   }
 }

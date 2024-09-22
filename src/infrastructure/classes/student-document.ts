@@ -12,14 +12,14 @@ const types = [
 
 export class StudentDocument {
   id: number
-  name: string
+  title: string
   body: string
   createdAt: moment.Moment
   type: DocumentType
 
   constructor(data: IStudentDocument) {
     this.id = data.id
-    this.name = data.name
+    this.title = data.title
     this.body = data.body
     this.createdAt = moment().date(data.id)
     this.type = getRandomElementFromArr(types)

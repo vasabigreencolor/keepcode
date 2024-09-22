@@ -36,7 +36,7 @@ const iconComponent = icons[data.type] || null
 <template>
   <div class="card">
     <div>
-      <div :title="data.name" class="name">{{ data.name }}</div>
+      <div :title="data.title" class="name">{{ data.title }}</div>
       <div class="date">{{ data.createdAt.format(DateFormats.FullDate) }}</div>
 
       <div class="controls">
@@ -53,10 +53,12 @@ const iconComponent = icons[data.type] || null
 
 <style scoped lang="scss">
 .card {
+  width: 320px;
   padding: 20px;
   background-color: $white;
   border-radius: 10px;
   display: flex;
+  gap: 20px;
   transition: box-shadow 0.3s;
   cursor: pointer;
 

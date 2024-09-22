@@ -1,4 +1,6 @@
 {
   "addDocument": "Add document",
-  "sortBy": "Sort by"
+  "sortBy": "Sort by",
+  "save": "Save",
+  "cancel": "Cancel"
 }
